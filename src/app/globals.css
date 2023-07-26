@@ -23,8 +23,13 @@
     width: 100%;
   }
 
-  td,
+  td {
+    border: 1px solid #000000;
+    text-align: left;
+    padding: 8px;
+  }
   th {
+    @apply bg-primary;
     border: 1px solid #000000;
     text-align: left;
     padding: 8px;
@@ -37,5 +42,20 @@
   }
   .sectionPadding {
     @apply mx-auto px-4 sm:px-16 md:px-20 lg:max-w-5xl lg:px-24 xl:max-w-6xl 2xl:max-w-[1366px];
+  }
+}
+
+@layer utilities {
+  @variants responsive {
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .no-scrollbar {
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+    }
   }
 }

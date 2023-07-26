@@ -1,3 +1,5 @@
+import ImageGallery from "@/components/ImageGallery";
+
 export const metadata = {
   title: "Products",
   description: "",
@@ -279,12 +281,15 @@ const plasticLids = (
 export default function Products() {
   return (
     <main className="sectionPadding">
-      <h3 className="py-12">
+      <h3 className="py-20">
         Oaks Packaging produces paper disposable products ranging from 70ml
         ice-cream cups to 22oz drink glasses, paper trays, bowls and plates,
         these can be either ready-made in house designs or customized cups to
         showcase the personality of your brand.
       </h3>
+      <section className="pb-12">
+        <ImageGallery />
+      </section>
       <section className="flex flex-col gap-12 px-16 pb-12">
         <div>{coldCupsTable}</div>
         <div>{hotCupsTable}</div>
@@ -294,6 +299,11 @@ export default function Products() {
         <div>{paperPlates}</div>
         <div>{plasticLids}</div>
       </section>
+      <h3 className="pb-20">
+        In addition to the above products we are also capable of providing
+        services including corrugated paper, PE coating, slitting, dye-cutting
+        and glueing.
+      </h3>
     </main>
   );
 }

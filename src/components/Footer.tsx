@@ -5,10 +5,11 @@ export default function Footer() {
     <section className="bg-primary py-10 text-white">
       <div className="sectionPadding mx-auto grid grid-rows-3 gap-2 md:grid-cols-3 md:grid-rows-1">
         <div className="flex flex-col justify-between border-b-2 border-green-800 border-opacity-30 py-10 md:border-b-0 md:border-r-2 md:px-10 md:py-0">
+          <Link href="/">Home</Link>
           <Link href="/about">About us</Link>
           <Link href="/products">Products</Link>
           <Link href="/customorder">Custom</Link>
-          <Link href="/contact">About us</Link>
+          <Link href="/contact">Contact us</Link>
         </div>
 
         <div className="flex flex-col border-y-2 border-green-800 border-opacity-30 py-10 md:border-x-2 md:border-y-0 md:px-10 md:py-0">
