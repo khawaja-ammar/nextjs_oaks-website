@@ -1,5 +1,13 @@
 import ImageGallery from "@/components/ImageGallery";
 
+const images = [
+  "/assets/productsection/prod3.jpeg",
+  "/assets/productsection/prod1.jpeg",
+  "/assets/productsection/prod2.jpeg",
+  "/assets/productsection/prod3.jpeg",
+  "/assets/productsection/prod2.jpeg",
+];
+
 export const metadata = {
   title: "Products",
   description: "",
@@ -288,7 +296,7 @@ export default function Products() {
         showcase the personality of your brand.
       </h3>
       <section className="pb-12">
-        <ImageGallery />
+        <ImageGallery images={images} />
       </section>
       <section className="flex flex-col gap-12 px-16 pb-12">
         <div>{coldCupsTable}</div>

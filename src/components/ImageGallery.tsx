@@ -1,19 +1,24 @@
 "use client";
+
 import { useState } from "react";
 import {
   BsFillArrowLeftCircleFill,
   BsFillArrowRightCircleFill,
 } from "react-icons/bs";
 
-const images = [
-  "/assets/productsection/prod3.jpeg",
-  "/assets/productsection/prod1.jpeg",
-  "/assets/productsection/prod2.jpeg",
-  "/assets/productsection/prod3.jpeg",
-  "/assets/productsection/prod2.jpeg",
-];
+// const images = [
+//   "/assets/productsection/prod3.jpeg",
+//   "/assets/productsection/prod1.jpeg",
+//   "/assets/productsection/prod2.jpeg",
+//   "/assets/productsection/prod3.jpeg",
+//   "/assets/productsection/prod2.jpeg",
+// ];
 
-export default function ImageGallery() {
+type Props = {
+  images: string[];
+};
+
+export default function ImageGallery({ images }: Props) {
   const [active, setActive] = useState(0);
   const setSlide = (i: number) => {
     if (i === 1) {
