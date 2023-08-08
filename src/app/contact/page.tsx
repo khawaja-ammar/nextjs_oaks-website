@@ -1,5 +1,6 @@
 "use client";
 import { FormEvent, useState } from "react";
+import { MdPhone, MdLocationOn, MdEmail } from "react-icons/md";
 
 export default function Contact() {
   const [name, setName] = useState("");
@@ -40,10 +41,28 @@ export default function Contact() {
         <div className="flex basis-full flex-col gap-4">
           <h3>Contact Us</h3>
           <div className="flex flex-col gap-2">
-            <div>+92-3312228141</div>
-            <div>+92-3359254400</div>
-            <div>oakspackaging@gmail.com</div>
-            <div>Lahore, Pakistan</div>
+            <div className="flex items-center gap-2">
+              <MdPhone />
+              <p>+92-3312228141</p>
+            </div>
+            <div className="flex items-center gap-2">
+              <MdPhone />
+              <p>+92-3359254400</p>
+            </div>
+            <div className="flex items-center gap-2">
+              <MdEmail />
+              <p>oakspackaging@gmail.com</p>
+            </div>
+            <div className="flex items-center gap-2">
+              <MdLocationOn />
+              <div>
+                <p>Oaks Packaging Limited </p>
+                <p>Ferozepur Road,</p>
+                <p>Masjid Ibrahim St, Green Cap Housing Scheme</p>
+                <p>Lahore, Punjab 54760</p>
+                <p>Pakistan</p>
+              </div>
+            </div>
           </div>
         </div>
         <div className="basis-full">
@@ -112,6 +131,7 @@ export default function Contact() {
           </form>
         </div>
       </section>
+      <div className="">MAP</div>
     </main>
   );
 }
