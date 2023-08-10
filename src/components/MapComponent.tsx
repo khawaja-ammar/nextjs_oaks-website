@@ -1,25 +1,45 @@
-import { GoogleMap, Marker, LoadScript } from "@react-google-maps/api";
-const containerStyle = {
-  width: "100%",
-  height: "400px",
+"use client";
+
+import { Loader } from "@googlemaps/js-api-loader";
+import { useEffect } from "react";
+
+const mapOptions = {
+  center: {
+    lat: 31.400489,
+    lng: 74.360914,
+  },
+  zoom: 18,
 };
 
-const center = {
-  lat: 31.400489,
-  lng: 74.360914,
-};
+export default async function MapComponent() {
+  const loadGoogleMaps = () => {
+    const loader = new Loader({
+      apiKey: process.env.NEXT_PUBLIC_MAP_API!,
+      version: "weekly",
+      libraries: ["marker", "places"],
+    });
 
-const markerPosition = {
-  lat: 31.400489,
-  lng: 74.360914,
-};
+    return loader.load();
+  };
 
-export default function MapComponent() {
+  useEffect(() => {
+    loadGoogleMaps().then((google) => {
+      const map = new google.maps.Map(
+        document.getElementById("map")!,
+        mapOptions
+      );
+
+      const marker = new google.maps.Marker({
+        position: { lat: 31.400489, lng: 74.360914 },
+        map: map,
+        title: "Oaks Packaging",
+      });
+    });
+  }, []);
+
   return (
-    <LoadScript googleMapsApiKey={process.env.MAP_API as string}>
-      <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={18}>
-        <Marker position={markerPosition} />
-      </GoogleMap>
-    </LoadScript>
+    <div id="map" className="h-[400px] w-full">
+      loading ...
+    </div>
   );
 }
