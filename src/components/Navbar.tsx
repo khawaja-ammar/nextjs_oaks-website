@@ -98,7 +98,7 @@ export default function Navbar({ children }: { children: ReactNode }) {
                   <div>
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
-                      src="/logo.png"
+                      src="/logo.svg"
                       width="120px"
                       height="75px"
                       alt="Oaks Logo"

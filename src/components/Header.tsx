@@ -13,7 +13,7 @@ export default function Header() {
               Fulfilling the packaging needs of a growing Pakistan!
             </h1>
             <div className="flex">
-              <Link href="/contactus">
+              <Link href="/contact">
                 <div className="rounded-full bg-white px-4 py-1 text-black">
                   <p className="">Contact Us</p>
                 </div>
