@@ -1,3 +1,8 @@
+export const metadata = {
+  title: "Custom Order",
+  description: "",
+};
+
 const boxes = [
   {
     heading: "Influence",

@@ -298,7 +298,7 @@ export default function Products() {
       <section className="pb-12">
         <ImageGallery images={images} />
       </section>
-      <section className="flex flex-col gap-12 px-16 pb-12">
+      <section className="flex flex-col items-center gap-12 px-16 pb-12 md:items-stretch">
         <div>{coldCupsTable}</div>
         <div>{hotCupsTable}</div>
         <div>{iceCreamCupsTable}</div>

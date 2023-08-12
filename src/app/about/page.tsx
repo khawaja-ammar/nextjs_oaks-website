@@ -1,5 +1,10 @@
 import ClientsImages from "@/components/ClientsImages";
 
+export const metadata = {
+  title: "About Us",
+  description: "",
+};
+
 const images = [
   "/assets/clients/airplane.png",
   "/assets/clients/cafes.png",

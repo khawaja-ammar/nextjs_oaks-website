@@ -19,7 +19,7 @@ export default function Footer() {
           <p>Masjid Ibrahim St, Green Cap Housing Scheme</p>
           <p>Lahore, Punjab 54760</p>
           <p>Pakistan</p>
-          <p>Tel No: (92)332-3004835</p>
+          <p>Tel No: 0332-3004835</p>
         </div>
 
         <div className="flex flex-col gap-4 border-t-2 border-green-800 border-opacity-30 py-10 md:border-l-2 md:border-t-0 md:px-10 md:py-0">
