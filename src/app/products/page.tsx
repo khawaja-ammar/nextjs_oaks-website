@@ -1,12 +1,19 @@
 import ImageGallery from "@/components/ImageGallery";
 
-const images = [
-  "/assets/productsection/prod3.jpeg",
-  "/assets/productsection/prod1.jpeg",
-  "/assets/productsection/prod2.jpeg",
-  "/assets/productsection/prod3.jpeg",
-  "/assets/productsection/prod2.jpeg",
-];
+function imageLinks(total: number) {
+  const arr = [];
+  for (let i = 0; i < total; i++) {
+    arr.push(`/assets/productsection/image${i + 1}.jpg`);
+    // arr.push({
+    //   original: `/assets/productsection/image${i + 1}.jpg`,
+    //   thumbnail: `/assets/productsection/image${i + 1}.jpg`,
+    // });
+  }
+  return arr;
+}
+// const myImages = imageLinks(24);
+
+const images = imageLinks(24);
 
 export const metadata = {
   title: "Products",

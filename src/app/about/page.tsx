@@ -83,7 +83,7 @@ export default function About() {
           </p>
         </div>
         <div>
-          <h3>Our Customers</h3>
+          <h3>Industries we serve</h3>
           <ClientsImages images={images} />
         </div>
       </section>

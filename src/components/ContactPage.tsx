@@ -69,10 +69,6 @@ export default function ContactPage() {
             </div>
             <div className="flex items-center gap-2">
               <MdPhone />
-              <p>03332231296</p>
-            </div>
-            <div className="flex items-center gap-2">
-              <MdPhone />
               <p>03312228141</p>
             </div>
           </div>

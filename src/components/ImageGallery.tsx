@@ -1,18 +1,11 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 import {
   BsFillArrowLeftCircleFill,
   BsFillArrowRightCircleFill,
 } from "react-icons/bs";
-
-// const images = [
-//   "/assets/productsection/prod3.jpeg",
-//   "/assets/productsection/prod1.jpeg",
-//   "/assets/productsection/prod2.jpeg",
-//   "/assets/productsection/prod3.jpeg",
-//   "/assets/productsection/prod2.jpeg",
-// ];
 
 type Props = {
   images: string[];
@@ -39,7 +32,7 @@ export default function ImageGallery({ images }: Props) {
             id={`img_${i}`}
             className={active === i ? "block" : "hidden"}
           >
-            <img className="w-full" src={img} alt="gallery" />
+            <Image width={800} height={800} src={img} alt="gallery" />
           </div>
         ))}
 
@@ -56,8 +49,10 @@ export default function ImageGallery({ images }: Props) {
         <div className="flex flex-row border-t-2 border-black">
           {images.map((img, i) => (
             <div key={i} className="">
-              <img
-                className="w-full cursor-pointer"
+              <Image
+                className="cursor-pointer"
+                width={160}
+                height={160}
                 src={img}
                 alt="gallery"
                 onClick={() => setActive(i)}
